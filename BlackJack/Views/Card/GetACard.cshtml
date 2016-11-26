@@ -1,0 +1,42 @@
+﻿@model BlackJack.Models.CardDrawmodel
+
+@{
+    ViewBag.Title = "GetACard";
+}
+
+<h2>Dealer</h2>
+
+<br />
+<br />
+
+@foreach (var card in Model.cards)
+
+{
+    <img src="@card.image" />
+}
+
+<br />
+<br />
+
+<p>
+    @Html.ActionLink("button", "GetACard")
+</p>
+
+<br />
+<br />
+
+<hr />
+<br />
+
+<h2>Player</h2>
+
+<br />
+<br />
+
+@foreach (var card in Model.cards)
+{
+    <img src="@card.image" />
+}
+
+<br />
+<br />

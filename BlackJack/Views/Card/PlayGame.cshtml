@@ -1,0 +1,52 @@
+﻿@model BlackJack.Models.CardsViewModel
+
+@{
+    ViewBag.Title = "Index";
+}
+@using (Html.BeginForm())
+
+{
+    <h2>Dealer</h2>
+
+    <br />
+    <br />
+
+    foreach (var card in Model.dealer.hand)
+
+    {
+
+        <img src="@card.image" />
+    }
+
+    <br />
+    <br />
+
+    <p>
+        
+    </p>
+
+    <br />
+    <br />
+
+    <hr />
+    <br />
+
+    <h2>Player</h2>
+
+    <br />
+    <br />
+
+        foreach (var card in Model.player.hand)
+
+        {
+        <img src="@card.image" />
+    }
+
+    <br />
+    <br />
+
+    <p>
+        <input type="submit" value="Hit" name="playerHitButton" />
+        <input type="submit" value="Stay" name="playerStayButton" />
+    </p>
+}
